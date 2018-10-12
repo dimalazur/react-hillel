@@ -1,0 +1,92 @@
+
+.form {
+
+	padding: 20px;
+	font-family: $fontPrimary;
+	border: 1px solid #888;
+
+	.form-fieldset {
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	.form-row {
+		margin-bottom: 20px;
+		.field-label {
+			font-size: 15px;
+			line-height: 1.1;
+			margin-bottom: 5px;
+			display: inline-block;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	.form-field {
+		border-radius: 20px;
+		padding: 5px 15px;
+		font-size: 14px;
+		height: 40px;
+		outline: none;
+		border: 1px solid #888;
+		width: 100%;
+	}
+	.form-select {
+		border-radius: 20px;
+		padding: 5px 15px;
+		font-size: 14px;
+		height: 40px;
+		outline: none;
+		border: 1px solid #888;
+		width: 100%;
+	}
+	.btn-holder {
+		margin-top: 20px;
+		text-align: center;
+	}
+	.btn {
+		min-width: 250px;
+		border-radius: 30px;
+	}
+
+
+}
+
+.form-flex-holder {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+
+	.form-column {
+		flex-basis:50%;
+	}
+	.form-column-left {
+		padding-right: 15px;
+	}
+	.form-column-right {
+		padding-left: 15px;
+	}
+}
+
+
+
+@media (max-width: 767px) {
+	.form-flex-holder{
+		display: block;
+		padding: 0;
+		.form-column-left,
+		.form-column-right {
+			padding: 0;
+		}
+	}
+
+
+	.form {
+
+		.form-row {
+			margin-bottom: 13px;
+		}
+	}
+
+}
