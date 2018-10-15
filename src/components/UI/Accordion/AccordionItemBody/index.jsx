@@ -3,17 +3,15 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 
-
 class AccordionItemBody extends Component {
   render() {
     const { isOpened } = this.props;
-    const cn = classNames('content', {  'is-opened' : isOpened } );
+    const cn = classNames('content', { 'is-opened': isOpened });
     return (
-      <div className={cn} >
-        {this.props.children}	
+      <div className={cn}>
+        {this.props.children}
       </div>
     );
-    
   }
 }
 

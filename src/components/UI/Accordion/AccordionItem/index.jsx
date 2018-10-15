@@ -6,26 +6,36 @@ import AccordionItemBody from '../AccordionItemBody';
 
 
 class AccordionItem extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       isOpened: false,
     };
   }
+
   toggleContent() {
-    this.setState({isOpened: !this.state.isOpened});
+    this.setState({ isOpened: !this.state.isOpened });
   }
+
   render() {
-    const { title,description } = this.props;
-    
+    const { title, description } = this.props;
+
     return (
       <div className="accordion-item">
-        <AccordionItemHeader onClick={this.toggleContent.bind(this)} isOpened={this.state.isOpened} >{title}</AccordionItemHeader>
-        <AccordionItemBody isOpened={this.state.isOpened} >{description}</AccordionItemBody>
+        <AccordionItemHeader onClick={this.toggleContent.bind(this)} isOpened={this.state.isOpened}>{title}</AccordionItemHeader>
+        <AccordionItemBody isOpened={this.state.isOpened}>{description}</AccordionItemBody>
       </div>
     );
-    
   }
 }
+
+AccordionItem.propTypes = {
+  isOpened: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+AccordionItem.defaultProps = {
+  isOpened: false,
+};
 
 export default AccordionItem;

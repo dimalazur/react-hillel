@@ -6,28 +6,28 @@ import AccordionItemHeader from './AccordionItemHeader';
 
 import './styles.scss';
 
-class Accordion extends Component {  
-
-  
+class Accordion extends Component {
   render() {
     const accordionList = this.props.listAccordion;
-    
-    return (<div className="accordion">
+
+    return (
+      <div className="accordion">
         {
           accordionList.map((item, index) => (
-            <AccordionItem title={item.title} description={item.description} key={index} ></AccordionItem>
+            <AccordionItem title={item.title} description={item.description} key={index} />
           ))
         }
-      </div>);
+      </div>
+    );
   }
 }
 
 Accordion.propTypes = {
   children: PropTypes.node.isRequired,
-  listAccordion: PropTypes.arrayOf( PropTypes.shape({
+  listAccordion: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-  }).isRequired )
+  }).isRequired),
 };
 
 Accordion.defaultProps = {

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Icon = ({ className, type, name }) => {
-
   const cn = classNames(
     `fa${type.charAt(0).toLowerCase()}`,
     `fa-${name}`,

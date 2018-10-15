@@ -3,34 +3,34 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 class FormRow extends Component {
-	constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
-      
+
     };
   }
 
 
-
-
-  render(){
-  	const {onChange, value, type, name, placeholder, labelField, itSelect, children} = this.props;
+  render() {
+  	const {
+      onChange, value, type, name, placeholder, labelField, itSelect, children,
+    } = this.props;
   	return (
 
-  		<div className="form-row">
-        {
+    <div className="form-row">
+      {
           children
-        /*<label>{labelField}</label>
+        /* <label>{labelField}</label>
         <div className="field-holder">
           {
             if ( !itSelect) {
-              <input 
-                className="form-field form-input" 
-                onChange={ onChange } 
-                value={ value }  
-                type={type}  
-                name={name} 
-                placeholder={placeholder} 
+              <input
+                className="form-field form-input"
+                onChange={ onChange }
+                value={ value }
+                type={type}
+                name={name}
+                placeholder={placeholder}
               />
             } else {
               <select className="select">
@@ -42,10 +42,10 @@ class FormRow extends Component {
               </select>
             }
           }
-        </div>*/}
-      </div>
-  	)
-  }	
+        </div> */}
+    </div>
+  	);
+  }
 }
 
 export default FormRow;

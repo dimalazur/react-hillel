@@ -28,7 +28,7 @@ Button.defaultProps = {
   className: '',
 };
 
-/*export default Button;*/
+/* export default Button; */
 
 export default branch(
   ({ iconName }) => Boolean(iconName),

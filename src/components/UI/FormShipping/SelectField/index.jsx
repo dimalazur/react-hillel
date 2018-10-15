@@ -4,40 +4,40 @@ import classNames from 'classnames';
 import Option from './Option';
 
 class SelectField extends Component {
-	constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
-      
+
     };
   }
 
 
-
-
-  render(){
-  	const {onChange, value, name, label, optionArr} = this.props;
+  render() {
+  	const {
+      onChange, value, name, label, optionArr,
+    } = this.props;
   	return (
 
-  		<div className="select-holder">
-        <label className="field-label" >{label}</label>
-        <div className="field-holder">
-          <select onChange={onChange} className="select form-select" name={name}>
-             {  
+    <div className="select-holder">
+      <label className="field-label">{label}</label>
+      <div className="field-holder">
+        <select onChange={onChange} className="select form-select" name={name}>
+          {
                 optionArr.map((item, index) => (
-                  <Option optionValue={item.value} optionName={item.name} key={index}/>
+                  <Option optionValue={item.value} optionName={item.name} key={index} />
                 ))
               }
-            
-          </select>
-          {
-            /*if ( !itSelect) {
-              <input 
-                className="form-field form-input" 
-                onChange={ onChange } 
-                value={ value }  
-                type={type}  
-                name={name} 
-                placeholder={placeholder} 
+
+        </select>
+        {
+            /* if ( !itSelect) {
+              <input
+                className="form-field form-input"
+                onChange={ onChange }
+                value={ value }
+                type={type}
+                name={name}
+                placeholder={placeholder}
               />
             } else {
               <select className="select">
@@ -47,12 +47,12 @@ class SelectField extends Component {
                 <option value="default">Option 4</option>
                 <option value="default">Option 5</option>
               </select>
-            }*/
+            } */
           }
-        </div>
       </div>
-  	)
-  }	
+    </div>
+  	);
+  }
 }
 
 export default SelectField;
